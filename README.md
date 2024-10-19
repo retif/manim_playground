@@ -1,8 +1,6 @@
-# Some scripts for Manim
-
-This repository contains a Manim scripts for visualizing signals in Manin.
-
 ## Overview
+
+This repository contains a Manim scripts for visualizing signals.
 
 [`sinesum.py`](./sinesum.py) - animation of two sine waves and their combined sum. The animation includes:
 
