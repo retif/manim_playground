@@ -11,6 +11,9 @@ This repository contains a Manim scripts for visualizing signals.
 
 [![Sine Wave Animation](https://img.youtube.com/vi/T5CaQu8WelQ/0.jpg)](https://www.youtube.com/watch?v=T5CaQu8WelQ)
 
+
+[`ztransform.py`](./ztransform.py) - Transfer function in Z-space visualization
+
 ### Prerequisites
 
 To run this project, you need to have Manim installed. You can install it via pip:
