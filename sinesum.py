@@ -2,7 +2,8 @@ from manim import *
 import numpy as np
 
 # run command:
-# manim -qm sinesum.py SineSum --renderer=opengl --write_to_movie --disable_caching
+# manim -qm sinesum.py SineSum --renderer=opengl -p
+# manim render sinesum.py SineSum --renderer=opengl -qh --fps 30 --format webm
 #
 
 class SineSum(Scene):  # Scene name is 'Sine'
@@ -97,4 +98,4 @@ class SineSum(Scene):  # Scene name is 'Sine'
         self.play(FadeIn(dots_sum))
         self.wait(5)
 
-        # self.interactive_embed()
+        self.interactive_embed()
