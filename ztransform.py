@@ -96,7 +96,13 @@ class ZTransform(ThreeDScene):
         self.add(pole_marker)
 
         # Define points of interest in the new order, including (0, 0) and (1, 0)
-        points_of_interest = [(-0.5, 0.5), (0.5, 0.5), (-0.5, -0.5), (0.5, -0.5), (0, 0), (1, 0)]
+        points_of_interest = [
+            (0.5, 0.5), (0.5, -0.5), (0.5, 0.5), (0.5, -0.5), (0.5, 0.5), 
+            (0, 0), (0.5, -0.5), (0,0), (0.5, 0.5), (0,0), (0.5, -0.5),
+            (0, 0), (1, 0), (0, 0), (1, 0), (0, 0), (1, 0),
+            (0.5, -0.5), (-0.5, -0.5), (-0.5, 0.5), (0.5, 0.5)
+        ]
+
         scaled_points = [axes.c2p(real, imag, 0) for real, imag in points_of_interest]
 
         # Visualize each point of interest as a sphere
@@ -145,6 +151,8 @@ class ZTransform(ThreeDScene):
 
         # Animate the pointer sequentially through the scaled points of interest
         for point in scaled_points:
-            self.play(pointer.animate.move_to(point), run_time=2)
+            self.play(pointer.animate.move_to(point), run_time=5)
+
+        self.wait(5)
 
         self.interactive_embed()
